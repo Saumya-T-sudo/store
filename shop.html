@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ama ki Rajdulari - Shop</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: #ffcccb;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            color: #333;
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: #ff6f61;
+        }
+
+        /* Shop Section */
+        #shop {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        #shop h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .product h3 {
+            font-size: 20px;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .product p {
+            font-size: 18px;
+            color: #ff6f61;
+            margin-bottom: 10px;
+        }
+
+        .product button {
+            padding: 10px 20px;
+            background-color: #ff6f61;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .product button:hover {
+            background-color: #e55a50;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #ffcccb;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .social-links a:hover {
+            color: #ff6f61;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Ama ki Rajdulari</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Shop Page -->
+    <section id="shop">
+        <h2>Our Collection</h2>
+        <div class="gallery">
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1596627117741-7c1c7f6a7f3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Floral Dress">
+                <h3>Floral Dress</h3>
+                <p>₹999</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1583394838336-18e7b3d48d64?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Denim Jacket">
+                <h3>Denim Jacket</h3>
+                <p>₹1499</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1614026717447-2e2e86e5f9b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Rainbow T-Shirt">
+                <h3>Rainbow T-Shirt</h3>
+                <p>₹799</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Cute Overalls">
+                <h3>Cute Overalls</h3>
+                <p>₹1999</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Ama ki Rajdulari. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Cart array to store items
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Add to cart functionality
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const product = e.target.closest('.product');
+                    const item = {
+                        name: product.querySelector('h3').textContent,
+                        price: parseFloat(product.querySelector('p').textContent.replace('₹', '')),
+                        image: product.querySelector('img').src
+                    };
+
+                    cart.push(item);
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    alert(`${item.name} added to cart!`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
